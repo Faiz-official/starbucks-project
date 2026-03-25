@@ -69,8 +69,6 @@ pipeline {
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
                        sh 'docker-scout quickview mydockerhub12/starbucks:latest'
-                       sh 'docker-scout cves mydockerhub12/starbucks:latest'
-                       sh 'docker-scout recommendations mydockerhub12/starbucks:latest'
                    }
                 }
             }
